@@ -13,6 +13,11 @@ void main()
 		else if (i==1) Fibonacci[1] = 1; 
 		else Fibonacci[i] = Fibonacci[i - 2] + Fibonacci[i - 1];
 	}
+	for (int i = 0; i < limit_num_fibbonacci; i++)
+	{
+		cout << Fibonacci[i] << "\t"; 
+	}
+	cout << endl; 
 	delete[] Fibonacci; 
 
 
