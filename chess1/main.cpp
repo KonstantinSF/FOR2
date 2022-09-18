@@ -9,10 +9,12 @@ using namespace std;
 #define HORIZ_LINE			"\xC4\xC4"
 #define VERT_LINE			(char)179
 #define BLACK_BOX			"  "
+#define CHESS_DESK
 
 void main()
 {
 	setlocale(LC_ALL, "");
+#ifdef CHESS_DESK
 	int n;
 	cout << "¬ведите размер доски:"; cin >> n;
 	setlocale(LC_ALL, "C");
@@ -34,4 +36,5 @@ void main()
 		}
 		cout << endl;
 	}
+#endif
 }
