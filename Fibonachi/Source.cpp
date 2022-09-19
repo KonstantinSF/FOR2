@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 using namespace std; 
 using std::cout;
 using std::cin;
@@ -12,7 +12,7 @@ void main()
 	setlocale(LC_ALL, "");
 #ifdef FIBONACCI_NUMBERS
 	int num_fibonacci;
-	cout << "Введите количество чисел ряда Фибоначчи:"; cin >> num_fibonacci;
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ С‡РёСЃРµР» СЂСЏРґР° Р¤РёР±РѕРЅР°С‡С‡Рё:"; cin >> num_fibonacci;
 	long long* Fibonacci = new long long[num_fibonacci];
 	for (int i = 0; i < num_fibonacci; i++)
 	{
@@ -29,12 +29,12 @@ void main()
 #endif
 #ifdef FIBONACCI_LIMIT
 	long long lim_num_fibonacci;
-	cout << "Введите предельное число, до которого хотите увидеть ряд Фиббоначи: "; cin >> lim_num_fibonacci;
-	int size_fibonacci = 1;//размер массива для вывода
-	int a = 0;// первый в последовательности
-	int b = 1;//следующий
-	int c = 0;//следующий за следующим
-	for (; ;)//узнаем размер массива для Фибоначчи
+	cout << "Р’РІРµРґРёС‚Рµ РїСЂРµРґРµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ, РґРѕ РєРѕС‚РѕСЂРѕРіРѕ С…РѕС‚РёС‚Рµ СѓРІРёРґРµС‚СЊ СЂСЏРґ Р¤РёР±Р±РѕРЅР°С‡Рё: "; cin >> lim_num_fibonacci;
+	int size_fibonacci = 1;//СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР° РґР»СЏ РІС‹РІРѕРґР°
+	int a = 0;// РїРµСЂРІС‹Р№ РІ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚Рё
+	int b = 1;//СЃР»РµРґСѓСЋС‰РёР№
+	int c = 0;//СЃР»РµРґСѓСЋС‰РёР№ Р·Р° СЃР»РµРґСѓСЋС‰РёРј
+	for (; ;)//СѓР·РЅР°РµРј СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР° РґР»СЏ Р¤РёР±РѕРЅР°С‡С‡Рё
 	{
 		
 		if (b < lim_num_fibonacci)
@@ -54,14 +54,14 @@ void main()
 		else break;
 	}
 	 
-	long long* Fibonacci = new long long[size_fibonacci];//динамич массив для ряда Фибоначчи
-	for (int i=0; i<size_fibonacci; i++)//заполнение массива числами из ряда Фибоначчи
+	long long* Fibonacci = new long long[size_fibonacci];//РґРёРЅР°РјРёС‡ РјР°СЃСЃРёРІ РґР»СЏ СЂСЏРґР° Р¤РёР±РѕРЅР°С‡С‡Рё
+	for (int i=0; i<size_fibonacci; i++)//Р·Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР° С‡РёСЃР»Р°РјРё РёР· СЂСЏРґР° Р¤РёР±РѕРЅР°С‡С‡Рё
 	{
 		if (i == 0) Fibonacci[0] = 0;
 		else if (i == 1) Fibonacci[1] = 1;
 		else Fibonacci[i] = Fibonacci[i - 1] + Fibonacci[i - 2]; 
 	}
-	for (int i = 0; i < size_fibonacci; i++)//вывод на экран
+	for (int i = 0; i < size_fibonacci; i++)//РІС‹РІРѕРґ РЅР° СЌРєСЂР°РЅ
 	{
 		cout << Fibonacci[i] << "\t";
 	}
