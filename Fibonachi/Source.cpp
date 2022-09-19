@@ -28,30 +28,26 @@ void main()
 	delete[] Fibonacci;
 #endif
 #ifdef FIBONACCI_LIMIT
-	long long lim_num_fibonacci;
+	long long lim_num_fibonacci;//число,меньше которого выводятся числа из ряда Фибоначчи
 	cout << "Введите предельное число, до которого хотите увидеть ряд Фиббоначи: "; cin >> lim_num_fibonacci;
 	int size_fibonacci = 1;//размер массива для вывода
-	int a = 0;// первый в последовательности
+	int a = 0;//первый в последовательности
 	int b = 1;//следующий
 	int c = 0;//следующий за следующим
 	for (; ;)//узнаем размер массива для Фибоначчи
 	{
-		
 		if (b < lim_num_fibonacci)
 		{
 			c = a + b; size_fibonacci++;
-		}
-		else break; 
+		} else break; 
 		if (c < lim_num_fibonacci)
 		{
 			a = b + c; size_fibonacci++;
-		}
-		else break;
+		} else break;
 		if (a < lim_num_fibonacci)
 		{
 			b = a + c; size_fibonacci++;
-		}
-		else break;
+		} else break;
 	}
 	 
 	long long* Fibonacci = new long long[size_fibonacci];//динамич массив для ряда Фибоначчи
